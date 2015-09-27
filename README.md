@@ -1,2 +1,2 @@
 # xkawi
-this repo contains informtion about me
+this repo contains information about me - xkawi.github.com
