@@ -48,6 +48,7 @@ h1 {
   width: 100%;
   height: 100%; /* For at least Firefox */
   min-height: 100%; 
+  z-index: 0;
   /*-webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
   /*box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
 }
@@ -116,7 +117,7 @@ h1 {
  * Cover
  */
 
- .cover {
+.cover {
   padding: 0 20px;
 }
 .cover .btn-lg {
@@ -171,31 +172,21 @@ h1 {
 
 @media all {
 
-  .background-overlay {
-    position: absolute;
+  #background-overlay {
+    position: fixed; 
+    top: 0; 
+    left: 0;  
+    z-index: -20; 
+    min-width: 100%;
+    min-height: 100%;    
+  }
+  #overlay-dim {
+    position: fixed;
     top: 0;
     z-index: -10;
-    width: 100%;
-    /*height: 100%;*/
-    /*background: -webkit-linear-gradient(top,rgba(0,0,0,0.6) 0,rgba(0,0,0,0.5) 30%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0.6) 100%);*/
-    /*background: linear-gradient(to bottom,rgba(0,0,0,0.6) 0,rgba(0,0,0,0.5) 30%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0.6) 100%);*/
-  }
-
-  .background-overlay > .dim {
-    position: absolute;
-    top: 0;
     height: 100%;
     width: 100%;
     background-color: rgba(0,0,0,0.55);
-  }
-
-  .background-overlay > img {
-    position: fixed; 
-    top: 0; 
-    left: 0;   
-    /* Preserve aspet ratio */
-    min-width: 100%;
-    min-height: 100%;
   }
 
 }
