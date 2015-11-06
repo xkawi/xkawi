@@ -116,7 +116,7 @@ h1 {
  * Cover
  */
 
-.cover {
+ .cover {
   padding: 0 20px;
 }
 .cover .btn-lg {
@@ -187,7 +187,15 @@ h1 {
     height: 100%;
     width: 100%;
     background-color: rgba(0,0,0,0.55);
-    
+  }
+
+  .background-overlay > img {
+    position: fixed; 
+    top: 0; 
+    left: 0;   
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
   }
 
 }
